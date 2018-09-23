@@ -103,8 +103,8 @@ def decoder(rgbList):
 # MAIN PROGRAM
 
 filename = input("\nPlease enter the file name: ")
-if filename[-4:] != ".bmp":
-    filename += ".bmp"
+if filename[-4] != ".":     # If no file extension is specified assume PNG
+    filename += ".png"
 chromacode = pygame.image.load(filename)
 
 if checkCode(chromacode) == False:
